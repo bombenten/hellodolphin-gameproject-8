@@ -22,7 +22,7 @@ class StartScene extends Phaser.Scene {
     }
     create() {
 
-        background = this.add.image(400,300,'bg').setScale(0.75);
+        background = this.add.tileSprite(0,0,2000,800,'bg').setOrigin(0,0).setScale(0.75);
         midground = this.add.tileSprite(0,0,2000,800,'mg').setOrigin(0,0).setScale(0.75);
         foreground = this.add.tileSprite(0,0,2000,800,'fg').setOrigin(0,0).setScale(0.75);
         logo = this.add.image(400,100,'logo');
@@ -37,6 +37,7 @@ class StartScene extends Phaser.Scene {
         
     }
     update() {
+        background.tilePositionX += 0.5;
         foreground.tilePositionX += 2.5;
         midground.tilePositionX += 1;
     }

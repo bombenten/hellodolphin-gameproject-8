@@ -159,7 +159,7 @@ class GameScene extends Phaser.Scene {
         goal = this.physics.add.sprite(100000,0,'goal');
         goalGroup = this.physics.add.group();
         winEvent = this.time.addEvent({
-            delay: 60000,
+            delay: 6000,
             callback: function(){
                 goal = this.physics.add.sprite(1500,300,'goal').setScale(1.25).setSize(300,600);
                 goalGroup.add(goal);
